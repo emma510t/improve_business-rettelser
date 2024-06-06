@@ -36,7 +36,11 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <Link href="#consultant-areas" aria-label="Konsulentområder">
+        <Link
+          href="#consultant-areas"
+          aria-label="Konsulentområder"
+          className="max-md:hidden"
+        >
           <Button
             hasChevron
             size="xlIcon"
