@@ -1,16 +1,8 @@
 import { supabase } from "../lib/supabaseclient";
 import { ProductCard } from "./ui/product-card";
 
-export default async function ProductCardSection({
-  parentCategory,
-  cardVariant,
-  desc,
-  slugIcon,
-}) {
-  const { data, error } = await supabase
-    .from("ib-product-cards")
-    .select("*")
-    .eq("parent", parentCategory);
+export default async function ProductCardSection({ parentCategory, cardVariant, desc, slugIcon }) {
+  const { data, error } = await supabase.from("ib-product-cards_v2").select("*").eq("parent", parentCategory);
 
   if (error || !data || data.length === 0) {
     // Handle the error case (e.g., return a 404 page or a different component)

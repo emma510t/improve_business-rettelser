@@ -2,7 +2,7 @@ import MainNav from "./main-nav";
 import { supabase } from "../lib/supabaseclient";
 
 async function Header() {
-  const { data, error } = await supabase.from("ib-product-cards").select("*");
+  const { data, error } = await supabase.from("ib-product-cards_v2").select("*");
 
   if (error || !data || data.length === 0) {
     // Handle the error case (e.g., return a 404 page or a different component)

@@ -7,10 +7,7 @@ import Icon from "./ui/icon";
 import Link from "next/link";
 
 export default async function YdelseSection({ parent, title }) {
-  const { data, error } = await supabase
-    .from("ib-product-cards")
-    .select("*")
-    .eq("parent", parent);
+  const { data, error } = await supabase.from("ib-product-cards_v2").select("*").eq("parent", parent);
 
   if (error || !data || data.length === 0) {
     // Handle the error case (e.g., return a 404 page or a different component)
@@ -42,16 +39,11 @@ export default async function YdelseSection({ parent, title }) {
             ))}
           </div>
         </SplitSectionChild>
-        <SplitSectionChild
-          sticky
-          className="bg-ibgreen-400 flex items-center max-md:hidden"
-        >
+        <SplitSectionChild sticky className="bg-ibgreen-400 flex items-center max-md:hidden">
           <h2 className="font-medium text-base md:text-3xl">
             {title}s-
             <br />
-            <span className="font-bold text-[32px]/[1.4] pb-4 sm:text-4xl md:text-6xl lg:text-8xl xl:text-8xl">
-              ydelser
-            </span>
+            <span className="font-bold text-[32px]/[1.4] pb-4 sm:text-4xl md:text-6xl lg:text-8xl xl:text-8xl">ydelser</span>
           </h2>
         </SplitSectionChild>
       </SplitSection>
