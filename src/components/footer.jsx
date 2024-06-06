@@ -164,7 +164,7 @@ export default function Footer() {
           </ul>
         </div>
         <div className="flex flex-col gap-7 md:gap-8">
-          <p className="text-xl font-semibold font-poppins">Lokation</p>
+          <p className="text-xl font-semibold font-poppins">Lokationer</p>
           <div>
             <p className="text-lg">The Union</p>
             <p className="text-lg">Lautrupsgade 13</p>
