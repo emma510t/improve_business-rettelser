@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import { H2, P } from "./ui/fonts";
 import Icon from "./ui/icon";
 import Link from "next/link";
+import he from "he";
 
 export default async function YdelseSection({ parent, title }) {
   const { data, error } = await supabase.from("ib-product-cards_v2").select("*").eq("parent", parent);
@@ -23,7 +24,7 @@ export default async function YdelseSection({ parent, title }) {
           <div className="flex flex-col gap-8 md:gap-20">
             {slugChildrenData.map((child) => (
               <div key={child.icon}>
-                <H2>{child.title}</H2>
+                <H2>{he.decode(child.title)}</H2>
                 {child.content.map((content, index) => (
                   <P key={index}>{content.text}</P>
                 ))}
