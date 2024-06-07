@@ -11,16 +11,14 @@ export default async function CasesSection({ limit }) {
 
   const cases = data;
 
-  console.log(data, "cases data");
-
-  // let casesToRender = cases;
-  // if (limit) {
-  //   casesToRender = cases.slice(0, 3);
-  // }
+  let casesToRender = cases;
+  if (limit) {
+    casesToRender = cases.slice(0, 3);
+  }
 
   return (
     <div className="flex flex-wrap gap-x-5 gap-y-10 min-[850px]:gap-5 lg:gap-6 mx-3.5 py-8">
-      {cases.map((caseData) => (
+      {casesToRender.map((caseData) => (
         <CaseCards
           key={caseData.id}
           title={caseData.h1}

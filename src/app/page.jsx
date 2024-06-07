@@ -147,7 +147,7 @@ export default function Home() {
       <section className="bg-ibsilver-200 w-screen">
         <div className="pb-8 md:pb-12 pt-[25px] md:pt-[40px] max-w-[1280px] w-full px-2.5 sm:px-4 md:px-6 lg:px-8 xl:px-10 mx-auto">
           <H2>Cases</H2>
-          <CasesSection limitw />
+          <CasesSection limit />
         </div>
       </section>
     </>
