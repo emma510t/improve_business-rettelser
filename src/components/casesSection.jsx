@@ -19,15 +19,9 @@ export default async function CasesSection({ limit }) {
   // }
 
   return (
-    <div className="flex flex-wrap gap-x-5 gap-y-10 min-[850px]:gap-5 lg:gap-6 mx-3.5 py-8">
+    <div className="flex flex-wrap gap-x-5 gap-y-10 min-[850px]:gap-5 lg:gap-6 py-8">
       {cases.map((caseData) => (
-        <CaseCards
-          key={caseData.id}
-          title={caseData.h1}
-          intro={caseData.intro}
-          img={caseData.slug}
-          slug={caseData.slug}
-        />
+        <CaseCards key={caseData.id} title={caseData.h1} intro={caseData.intro} img={caseData.slug} slug={caseData.slug} />
       ))}
     </div>
   );
