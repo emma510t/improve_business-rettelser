@@ -130,6 +130,16 @@ function MainNav({ menuItems }) {
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
               <MenuItem
+                linkref="/cases"
+                className={pathname === "/cases" ? "text-ibgreen-400" : ""}
+              >
+                Cases
+              </MenuItem>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuLink asChild>
+              <MenuItem
                 linkref="/om-os"
                 className={pathname === "/om-os" ? "text-ibgreen-400" : ""}
               >
@@ -301,6 +311,17 @@ function MainNav({ menuItems }) {
                     }`}
                   >
                     Academy
+                  </Link>
+                </div>
+                <div className="w-full">
+                  <Link
+                    onClick={toggleDrawer}
+                    href="/cases"
+                    className={`p-4 hover:underline border-t-2 border-ibsilver-400 text-2xl font-semibold ${
+                      pathname === `/cases` ? "text-ibgreen-400" : ""
+                    }`}
+                  >
+                    Cases
                   </Link>
                 </div>
                 <div className="w-full">
