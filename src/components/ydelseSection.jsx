@@ -30,7 +30,7 @@ export default async function YdelseSection({ parent, title }) {
               .sort((a, b) => a.id - b.id) // Sort the array based on the id property
               .map((child) => (
                 <div key={child.icon}>
-                  <H2>{child.title}</H2>
+                  <H2>{he.decode(child.title)}</H2>
                   {child.content.map((content, index) => (
                     <P key={index}>{content.text}</P>
                   ))}
