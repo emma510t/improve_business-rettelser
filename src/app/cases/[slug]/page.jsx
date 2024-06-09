@@ -9,13 +9,16 @@ import CaseStatementCard from "@/components/ui/caseStatementCard";
 export async function generateMetadata({ params }) {
   const { slug } = params;
 
-  const { data, error } = await supabase.from("ib-cases").select("*").eq("slug", slug);
+  const { data, error } = await supabase
+    .from("ib-cases_v2")
+    .select("*")
+    .eq("slug", slug);
 
   if (error) {
     console.error("Error fetching metadata:", error);
     return {
-      title: "Default Title",
-      description: "Default description",
+      title: "Cases",
+      description: "Cases",
     };
   }
 
@@ -27,7 +30,10 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function CasePage({ params }) {
-  const { data, error } = await supabase.from("ib-cases").select("*").eq("slug", params.slug);
+  const { data, error } = await supabase
+    .from("ib-cases_v2")
+    .select("*")
+    .eq("slug", params.slug);
 
   if (error || !data || data.length === 0) {
     // Handle the error case (e.g., return a 404 page or a different component)
@@ -47,36 +53,53 @@ export default async function CasePage({ params }) {
 
       <section className="md:flex md:min-h-[50vh]">
         <SplitSectionChild className={"pb-0"}>
-          <H2 className="font-bold font-poppins text-[32px]">Situation og udfordringer</H2>
+          <H2 className="font-bold font-poppins text-[32px]">
+            Situation og udfordringer
+          </H2>
         </SplitSectionChild>
         <SplitSectionChild className={"pt-0"}>
           <P>{slugData.situation_udfordringer}</P>
         </SplitSectionChild>
       </section>
       <SplitSection>
-        <SplitSectionChild sticky className={"pb-2 bg-ibsilver-500 text-ibsilver-100 md:bg-ibgreen-400 md:text-ibsilver-600 lg:flex lg:flex-col lg:justify-center"}>
-          <h2 className="font-bold text-[32px]/[1.4] pb-4 sm:text-4xl md:text-6xl lg:text-8xl xl:text-8xl">Løsning</h2>
-          <p className="text-base md:text-3xl">Improve Business’ løsningsforslag er tredelt</p>
+        <SplitSectionChild
+          sticky
+          className={
+            "pb-2 bg-ibsilver-500 text-ibsilver-100 md:bg-ibgreen-400 md:text-ibsilver-600 lg:flex lg:flex-col lg:justify-center"
+          }
+        >
+          <h2 className="font-bold text-[32px]/[1.4] pb-4 sm:text-4xl md:text-6xl lg:text-8xl xl:text-8xl">
+            Løsning
+          </h2>
+          <p className="text-base md:text-3xl">
+            Improve Business’ løsningsforslag er tredelt
+          </p>
         </SplitSectionChild>
         <SplitSectionChild className={"pt-0 bg-ibsilver-500 text-ibsilver-100"}>
           <div className="flex flex-col gap-8 py-4 md:gap-12">
             <div>
               <h3 className="font-bold text-xl md:text-2xl mb-2">
-                <span className="text-ibgreen-400 text-2xl md:text-3xl">Fase 1: </span>
+                <span className="text-ibgreen-400 text-2xl md:text-3xl">
+                  Fase 1:{" "}
+                </span>
                 {slugData.fase_1_headline}
               </h3>
               <P>{slugData.fase_1_text}</P>
             </div>
             <div>
               <h3 className="font-bold text-xl md:text-2xl mb-2">
-                <span className="text-ibgreen-400 text-2xl md:text-3xl">Fase 2: </span>
+                <span className="text-ibgreen-400 text-2xl md:text-3xl">
+                  Fase 2:{" "}
+                </span>
                 {slugData.fase_2_headline}
               </h3>
               <P>{slugData.fase_2_text}</P>
             </div>
             <div>
               <h3 className="font-bold text-xl md:text-2xl mb-2">
-                <span className="text-ibgreen-400 text-2xl md:text-3xl">Fase 3: </span>
+                <span className="text-ibgreen-400 text-2xl md:text-3xl">
+                  Fase 3:{" "}
+                </span>
                 {slugData.fase_3_headline}
               </h3>
               <P>{slugData.fase_3_text}</P>
@@ -86,7 +109,11 @@ export default async function CasePage({ params }) {
       </SplitSection>
       <section className="px-3 py-8 max-w-[1280px] mx-auto grid md:grid-cols-2 lg:grid-cols-3">
         {statements.map((statement) => (
-          <CaseStatementCard key={statement.id} desc={statement.statement} title={slugData.h1} />
+          <CaseStatementCard
+            key={statement.id}
+            desc={statement.statement}
+            title={slugData.h1}
+          />
         ))}
       </section>
 
