@@ -7,6 +7,7 @@ import Image from "next/image";
 import ProductCardSection from "@/components/productCardSection";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import he from "he";
 
 export async function generateMetadata({ params }) {
   const { data, error } = await supabase
@@ -25,7 +26,7 @@ export async function generateMetadata({ params }) {
   const product = data[0];
 
   return {
-    title: product?.title || "Default Title",
+    title: product?.title.replace("&shy;", "") || "Default Title",
   };
 }
 
@@ -71,8 +72,8 @@ export default async function page({ params }) {
             className="md:pb-7
            "
           >
-            <PageTagBreadcrumb grandParent={"Consulting"} grandParentHRef={"/consulting"} parent={idData.parent} parentHRef={`/consulting/${params.slug}`} currentPage={idData.title} />
-            <H2>{idData.title}</H2>
+            <PageTagBreadcrumb grandParent={"Consulting"} grandParentHRef={"/consulting"} parent={idData.parent} parentHRef={`/consulting/${params.slug}`} currentPage={he.decode(idData.title)} />
+            <H2>{he.decode(idData.title)}</H2>
             {renderContent(idData.ydelse_content_1)}
 
             {/*  {idData.ydelse_content_1.map((content, index) => (

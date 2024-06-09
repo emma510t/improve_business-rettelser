@@ -28,16 +28,8 @@ export default function consulting() {
         <SplitSectionChild className={"bg-ibsilver-100 flex flex-col"}>
           <PageTagBreadcrumb currentPage={"Consulting"} />
           <H1 className={""}>Sammen løser vi dine udfordringer</H1>
-          <P className={""}>
-            Vi hjælper med at udvikle og implementere en effektiv strategi, hvor
-            vi identificerer jeres udfordringer, og sikrer en bæredygtig og
-            fremadseende løsning.
-          </P>
-          <P className={""}>
-            Vores ekspertområder dækker alt fra udviklingsfasen af nye ideer og
-            strategier, samt det værdiskabende kommunikative arbejde, som følger
-            en ny implementeret strategi.
-          </P>
+          <P className={""}>Vi hjælper med at udvikle og implementere en effektiv strategi, hvor vi identificerer jeres udfordringer, og sikrer en bæredygtig og fremadseende løsning.</P>
+          <P className={""}>Vores ekspertområder dækker alt fra udviklingsfasen af nye ideer og strategier, samt det værdiskabende kommunikative arbejde, som følger en ny implementeret strategi.</P>
           <Link className="pt-7 mt-auto" href="#ekspertOmråder">
             <Button hasSmallChevron className="gap-0.5">
               Se vores ekspertområder
@@ -46,60 +38,30 @@ export default function consulting() {
         </SplitSectionChild>
       </SplitSection>
       <section className="md:flex md:min-h-[50vh]">
-        <SplitSectionChild
-          className={
-            "max-md:pb-0 bg-ibsilver-600 md:bg-ibgreen-400 md:flex md:flex-col md:justify-between px-2.5 sm:px-4 md:px-6 lg:px-8 xl:px-10"
-          }
-        >
-          <H2 className={"max-md:text-ibsilver-100 pb-8"}>
-            Sådan kommer du i gang
-          </H2>
+        <SplitSectionChild className={"max-md:pb-0 bg-ibsilver-600 md:bg-ibgreen-400 md:flex md:flex-col md:justify-between px-2.5 sm:px-4 md:px-6 lg:px-8 xl:px-10"}>
+          <H2 className={"max-md:text-ibsilver-100 pb-8"}>Sådan kommer du i gang</H2>
           <Link className="hidden md:block md:mr-auto" href="/kontakt">
             <Button variant="ghost" size="noPadding" hasArrow>
               Kontakt os
             </Button>
           </Link>
         </SplitSectionChild>
-        <SplitSectionChild
-          className={"bg-ibsilver-600 max-md:pt-0 flex flex-col gap-8 md:pt-12"}
-        >
+        <SplitSectionChild className={"bg-ibsilver-600 max-md:pt-0 flex flex-col gap-8 md:pt-12"}>
           <div className="flex gap-3">
-            <p className="text-ibgreen-400 font-semibold text-2xl md:text-3xl">
-              1:{" "}
-            </p>
-            <P className={"text-ibsilver-100 font-semibold"}>
-              Udforsk vores forskellige ydelser nedenfor og find det, der bedst
-              matcher dine behov.
-            </P>
+            <p className="text-ibgreen-400 font-semibold text-2xl md:text-3xl">1: </p>
+            <P className={"text-ibsilver-100 font-semibold"}>Udforsk vores forskellige ydelser nedenfor og find det, der bedst matcher dine behov.</P>
           </div>
           <div className="flex gap-3">
-            <p className="text-ibgreen-400 font-semibold text-2xl md:text-3xl">
-              2:{" "}
-            </p>
-            <P className={"text-ibsilver-100 font-semibold"}>
-              Klik på ydelsen for at læse mere om hvad vi kan gøre for dig
-              indenfor området.
-            </P>
+            <p className="text-ibgreen-400 font-semibold text-2xl md:text-3xl">2: </p>
+            <P className={"text-ibsilver-100 font-semibold"}>Klik på ydelsen for at læse mere om hvad vi kan gøre for dig indenfor området.</P>
           </div>
           <div className="flex gap-3">
-            <p className="text-ibgreen-400 font-semibold text-2xl md:text-3xl">
-              3:{" "}
-            </p>
-            <P className={"text-ibsilver-100 font-semibold"}>
-              Skriv til os via vores kontaktformular for at aftale, hvordan vi
-              bedst løser dine udfordringer.
-            </P>
+            <p className="text-ibgreen-400 font-semibold text-2xl md:text-3xl">3: </p>
+            <P className={"text-ibsilver-100 font-semibold"}>Skriv til os via vores kontaktformular for at aftale, hvordan vi bedst løser dine udfordringer.</P>
           </div>
-          <P className={"text-ibsilver-100"}>
-            VI glæder os til at høre fra dig!
-          </P>
+          <P className={"text-ibsilver-100"}>VI glæder os til at høre fra dig!</P>
           <Link className="md:hidden" href="/kontakt">
-            <Button
-              className="mr-auto"
-              variant="ghostWhite"
-              size="noPadding"
-              hasArrow
-            >
+            <Button className="mr-auto" variant="ghostWhite" size="noPadding" hasArrow>
               Kontakt os
             </Button>
           </Link>
@@ -108,11 +70,7 @@ export default function consulting() {
       <section id="ekspertOmråder" className="bg-ibsilver-500 scroll-m-[79px]">
         <div className="pb-8 md:pb-24 pt-[25px] max-w-[1280px] w-full px-2.5 sm:px-4 md:px-6 lg:px-8 xl:px-10 mx-auto">
           <H2 className={"text-ibsilver-100"}>Vores ekspertområder</H2>
-          <ProductCardSection
-            parentCategory="consulting"
-            cardVariant="white"
-            desc
-          ></ProductCardSection>
+          <ProductCardSection parentCategory="consulting" cardVariant="white" desc></ProductCardSection>
         </div>
       </section>
       <SplitSection>
@@ -127,16 +85,8 @@ export default function consulting() {
         </SplitSectionChild>
         <SplitSectionChild className="flex flex-col">
           <H2>Opnå højere potentiale</H2>
-          <P>
-            Vores mål er at optimere din virksomheds potentiale gennem
-            skræddersyet rådgivning baseret på høje faglige standarder og et
-            solidt etisk fundament.
-          </P>
-          <P>
-            Sammen med vores erfarne konsulenter identificerer vi nøgleområder
-            inden for bæredygtighed og udvikler gradvise løsninger til at
-            forbedre din virksomheds præstationer og resultater.
-          </P>
+          <P>Vores mål er at optimere din virksomheds potentiale gennem skræddersyet rådgivning baseret på høje faglige standarder og et solidt etisk fundament.</P>
+          <P>Sammen med vores erfarne konsulenter identificerer vi nøgleområder inden for bæredygtighed og udvikler gradvise løsninger til at forbedre din virksomheds præstationer og resultater.</P>
           <Link className="pt-7 mt-auto w-fit h-fit" href="/kontakt">
             <Button variant="ghost" hasArrow size="noPadding">
               Kontakt os

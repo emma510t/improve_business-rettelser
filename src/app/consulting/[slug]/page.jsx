@@ -6,6 +6,7 @@ import PageTagBreadcrumb from "@/components/ui/pageTagBreadcrumb";
 import YdelseSection from "@/components/ydelseSection";
 import { supabase } from "@/lib/supabaseclient";
 import Image from "next/image";
+import he from "he";
 
 export async function generateMetadata({ params }) {
   const { slug } = params;
@@ -23,7 +24,7 @@ export async function generateMetadata({ params }) {
   const product = data[0];
 
   return {
-    title: product?.title || "Default Title",
+    title: product?.title.replace("&shy;", "") || "Default Title",
   };
 }
 
@@ -58,8 +59,8 @@ export default async function Page({ params }) {
           <Image src={`/img/${slugData.icon}.jpg`} alt={slugData.title} width={800} height={800} className="md:w-full md:h-full max-h-[340px] object-cover md:max-h-none bg-ibsilver-400" priority />
         </SplitSectionChild>
         <SplitSectionChild className="bg-ibsilver-600 text-ibsilver-100">
-          <PageTagBreadcrumb dark parent={"Consulting"} parentHRef={"/consulting"} currentPage={slugData.title} />
-          <H1>{slugData.title}</H1>
+          <PageTagBreadcrumb dark parent={"Consulting"} parentHRef={"/consulting"} currentPage={he.decode(slugData.title)} />
+          <H1>{he.decode(slugData.title)}</H1>
           {renderContent(slugData.content)}
           {/* {slugData.content.map((content, index) => (
             <P key={index}>{content.text}</P>
@@ -69,13 +70,13 @@ export default async function Page({ params }) {
       <section>
         <div className="pb-8 md:pb-12 pt-[25px] md:pt-[40px] max-w-[1280px] w-full px-2.5 sm:px-4 md:px-6 lg:px-8 xl:px-10 mx-auto">
           <H2 className="">
-            Vores <span className="lowercase">{slugData.title}</span>sydelser
+            Vores <span className="lowercase">{he.decode(slugData.title)}</span>s&shy;ydelser
           </H2>
           <ProductCardSection parentCategory={slugData.icon} />
         </div>
       </section>
       <div>
-        <YdelseSection parent={slugData.icon} title={slugData.title} />
+        <YdelseSection parent={slugData.icon} title={he.decode(slugData.title)} />
       </div>
       <section>
         <div className="pb-8 md:pb-12 pt-[25px] md:pt-[40px] max-w-[1280px] w-full px-2.5 sm:px-4 md:px-6 lg:px-8 xl:px-10 mx-auto">
