@@ -1,7 +1,7 @@
 import { supabase } from "../lib/supabaseclient";
 import { ProductCard } from "./ui/product-card";
 
-export default async function ProductCardSection({ parentCategory, cardVariant, desc, slugIcon }) {
+export default async function ProductCardSection({ parentCategory, cardVariant, desc, slugIcon, className }) {
   const { data, error } = await supabase.from("ib-product-cards_v2").select("*").eq("parent", parentCategory);
 
   if (error || !data || data.length === 0) {
@@ -13,7 +13,7 @@ export default async function ProductCardSection({ parentCategory, cardVariant, 
 
   return (
     <>
-      <div className="flex flex-wrap gap-2 sm:gap-4 md:gap-4 lg:gap-5 pt-[46px]">
+      <div className={`flex flex-wrap gap-2 sm:gap-4 md:gap-4 lg:gap-5 pt-[46px] ${className}`}>
         {productCards
           .filter((productCard) => productCard.icon !== slugIcon)
           .sort((a, b) => a.id - b.id)

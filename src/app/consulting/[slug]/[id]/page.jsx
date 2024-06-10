@@ -56,8 +56,8 @@ export default async function page({ params }) {
 
   return (
     <>
-      <SplitSection>
-        <SplitSectionChild img className="order-last">
+      <SplitSection desktop>
+        <SplitSectionChild img className="order-last 2xl:w-full">
           <Image
             className="md:w-full md:h-full max-h-[340px] object-cover md:max-h-none bg-ibsilver-400"
             src={`/img/ydelse/${idData.icon}.jpg`}
@@ -68,43 +68,45 @@ export default async function page({ params }) {
           />
         </SplitSectionChild>
         <SplitSectionChild>
-          <div
-            className="md:pb-7 max-w-[600px]
+          <div className="2xl:ml-auto 2xl:w-fit">
+            <div
+              className="md:pb-7 max-w-[600px]
            "
-          >
-            <PageTagBreadcrumb grandParent={"Consulting"} grandParentHRef={"/consulting"} parent={idData.parent} parentHRef={`/consulting/${params.slug}`} currentPage={he.decode(idData.title)} />
-            <H2>{he.decode(idData.title)}</H2>
-            {renderContent(idData.ydelse_content_1)}
+            >
+              <PageTagBreadcrumb grandParent={"Consulting"} grandParentHRef={"/consulting"} parent={idData.parent} parentHRef={`/consulting/${params.slug}`} currentPage={he.decode(idData.title)} />
+              <H2>{he.decode(idData.title)}</H2>
+              {renderContent(idData.ydelse_content_1)}
 
-            {/*  {idData.ydelse_content_1.map((content, index) => (
+              {/*  {idData.ydelse_content_1.map((content, index) => (
               <P key={index}>{content.text}</P>
             ))} */}
-            <Link className="hidden md:block md:mr-auto" href="/kontakt">
-              <Button hasArrow>Kontakt os</Button>
-            </Link>
-          </div>
+              <Link className="hidden md:block md:mr-auto" href="/kontakt">
+                <Button hasArrow>Kontakt os</Button>
+              </Link>
+            </div>
 
-          {idData.ydelse_headline_2 && idData.ydelse_content_2 && (
-            <div className="pt-5 max-w-[600px]">
-              <H3>{idData.ydelse_headline_2}</H3>
-              {renderContent(idData.ydelse_content_2)}
-              {/* {idData.ydelse_content_2.map((content, index) => (
+            {idData.ydelse_headline_2 && idData.ydelse_content_2 && (
+              <div className="pt-5 max-w-[600px]">
+                <H3>{idData.ydelse_headline_2}</H3>
+                {renderContent(idData.ydelse_content_2)}
+                {/* {idData.ydelse_content_2.map((content, index) => (
                 <P key={index}>{content.text}</P>
               ))} */}
-            </div>
-          )}
-          {idData.ydelse_headline_3 && idData.ydelse_content_3 && (
-            <div className="pt-5 max-w-[600px]">
-              <H3>{idData.ydelse_headline_3}</H3>
-              {renderContent(idData.ydelse_content_3)}
-              {/*   {idData.ydelse_content_3.map((content, index) => (
+              </div>
+            )}
+            {idData.ydelse_headline_3 && idData.ydelse_content_3 && (
+              <div className="pt-5 max-w-[600px]">
+                <H3>{idData.ydelse_headline_3}</H3>
+                {renderContent(idData.ydelse_content_3)}
+                {/*   {idData.ydelse_content_3.map((content, index) => (
                 <P key={index}>{content.text}</P>
               ))} */}
+              </div>
+            )}
+            <div className="pb-8 md:pb-12 pt-[25px] md:pt-[40px] max-w-[600px] w-full ">
+              <H2 className="max-w-[600px]">Se vores andre ekspertise&shy;områder</H2>
+              <ProductCardSection slugIcon={idData.icon} parentCategory={idData.parent} />
             </div>
-          )}
-          <div className="pb-8 md:pb-12 pt-[25px] md:pt-[40px] max-w-[1280px] w-full mx-auto">
-            <H2 className="max-w-[600px]">Se vores andre ekspertise&shy;områder</H2>
-            <ProductCardSection slugIcon={idData.icon} parentCategory={idData.parent} />
           </div>
         </SplitSectionChild>
       </SplitSection>

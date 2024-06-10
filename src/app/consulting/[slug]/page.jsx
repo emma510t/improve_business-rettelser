@@ -54,11 +54,18 @@ export default async function Page({ params }) {
 
   return (
     <>
-      <SplitSection>
-        <SplitSectionChild img>
-          <Image src={`/img/${slugData.icon}.jpg`} alt={slugData.title} width={800} height={800} className="md:w-full md:h-full max-h-[340px] object-cover md:max-h-none bg-ibsilver-400" priority />
+      <SplitSection desktop>
+        <SplitSectionChild desktop img>
+          <Image
+            src={`/img/${slugData.icon}.jpg`}
+            alt={slugData.title}
+            width={800}
+            height={800}
+            className="md:w-full md:h-full max-h-[340px] object-cover md:max-h-none bg-ibsilver-400 2xl:aspect-[2/1]"
+            priority
+          />
         </SplitSectionChild>
-        <SplitSectionChild className="bg-ibsilver-600 text-ibsilver-100">
+        <SplitSectionChild className="bg-ibsilver-600 text-ibsilver-100 2xl:h-full">
           <div className="max-w-[600px]">
             <PageTagBreadcrumb dark parent={"Consulting"} parentHRef={"/consulting"} currentPage={he.decode(slugData.title)} />
             <H1>{he.decode(slugData.title)}</H1>
@@ -79,7 +86,7 @@ export default async function Page({ params }) {
         </div>
       </section>
       <div>
-        <YdelseSection parent={slugData.icon} title={slugData.title} />
+        <YdelseSection parent={slugData.icon} title={he.decode(slugData.title)} />
       </div>
       <section>
         <div className="pb-8 md:pb-12 pt-[25px] md:pt-[40px] max-w-[1280px] w-full px-2.5 sm:px-4 md:px-6 lg:px-8 xl:px-10 mx-auto">

@@ -48,14 +48,14 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <SplitSection>
-        <SplitSectionChild img>
+      <SplitSection desktop>
+        <SplitSectionChild desktop img>
           <Image
             src="/img/forside-woman-presentation.jpeg"
             alt="kvinde holder præsentation"
             width={768}
             height={750}
-            className="md:w-full md:h-full max-h-[340px] object-cover md:max-h-none bg-ibsilver-400"
+            className="md:w-full md:h-full max-h-[340px] object-cover md:max-h-none bg-ibsilver-400 2xl:aspect-[2/1]"
           />
         </SplitSectionChild>
         <SplitSectionChild className="md:flex md:flex-col bg-ibsilver-200">
@@ -77,12 +77,18 @@ export default function Home() {
           </Link>
         </SplitSectionChild>
       </SplitSection>
-      <SplitSection>
-        <SplitSectionChild img className="order-last">
-          <Image src="/img/forside-man-with-coffee.jpeg" alt="mand sidder ved bord" width={768} height={750} className="md:w-full md:h-full max-h-[340px] object-cover md:max-h-none bg-ibsilver-400" />
+      <SplitSection desktop>
+        <SplitSectionChild desktop img className="order-last">
+          <Image
+            src="/img/forside-man-with-coffee.jpeg"
+            alt="mand sidder ved bord"
+            width={768}
+            height={750}
+            className="md:w-full md:h-full max-h-[340px] object-cover md:max-h-none bg-ibsilver-400 2xl:aspect-[2/1]"
+          />
         </SplitSectionChild>
-        <SplitSectionChild className="md:flex md:flex-col bg-ibsilver-500 text-ibsilver-100">
-          <div className="max-w-[600px]">
+        <SplitSectionChild className="bg-ibsilver-500 text-ibsilver-100">
+          <div className="max-w-[600px] md:flex md:flex-col 2xl:ml-auto">
             <H2>Dynamisk, Effektivt & Visionært</H2>
             <P>
               Hos Improve Business stræber vi efter at være dynamiske, effektive og visionære i alt, hvad vi gør. Bæredygtighed er centralt og gennemgående i alt vi tilbyder, da det er vigtigt for os,
@@ -90,12 +96,12 @@ export default function Home() {
             </P>
             <P>Dette indebærer bl.a. udvikling af målrettede strategier og handlingsplaner samt implementering i virksomhedens forretningsmodel og værdikæde.</P>
             <P>Hos Improve Business mener vi, at fremtidens sunde forretning er en bæredygtig forretning, og det er vores mål at hjælpe virksomheder med at opnå dette.</P>
+            <Link href="/academy" className="md:mt-auto w-fit h-fit mt-4">
+              <Button variant="ghostWhite" size="noPadding" hasArrow>
+                Se hvad vi tilbyder
+              </Button>
+            </Link>
           </div>
-          <Link href="/academy" className="md:mt-auto w-fit h-fit mt-4">
-            <Button variant="ghostWhite" size="noPadding" hasArrow>
-              Se hvad vi tilbyder
-            </Button>
-          </Link>
         </SplitSectionChild>
       </SplitSection>
       <section>

@@ -12,14 +12,14 @@ export const metadata = {
 export default function kontakt() {
   return (
     <>
-      <SplitSection>
-        <SplitSectionChild img className="order-last">
+      <SplitSection desktop>
+        <SplitSectionChild desktop img className="order-last">
           <div className="md:w-full md:h-full h-[100vh] max-h-[340px] md:max-h-none bg-ibblue-400 flex">
-            <Image src="/img/kontakt-hero.webp" alt="Improve Business' kontorbygning" width={1920} height={1080} className="mt-auto  object-cover 2xl:h-full" priority />
+            <Image src="/img/kontakt-hero.webp" alt="Improve Business' kontorbygning" width={1920} height={1080} className="mt-auto  object-cover " priority />
           </div>
         </SplitSectionChild>
         <SplitSectionChild>
-          <div className="max-w-[700px]">
+          <div className="max-w-[700px] 2xl:ml-auto">
             <PageTagBreadcrumb currentPage={"Kontakt"} />
             <H1>Tag kontakt</H1>
 

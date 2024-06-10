@@ -12,19 +12,19 @@ export const metadata = {
 export default function omOs() {
   return (
     <>
-      <SplitSection>
-        <SplitSectionChild img className="order-last ">
+      <SplitSection desktop>
+        <SplitSectionChild desktop img className="order-last ">
           <Image
             src="/img/om-os-hero.webp"
             alt="To personer taler ved bord"
             width={1920}
             height={1080}
-            className="md:w-full md:h-full max-h-[340px] object-cover md:max-h-none bg-ibsilver-400"
+            className="md:w-full md:h-full max-h-[340px] object-cover md:max-h-none bg-ibsilver-400 2xl:aspect-[2/1]"
             priority
           />
         </SplitSectionChild>
         <SplitSectionChild>
-          <div className="max-w-[600px]">
+          <div className="max-w-[600px] 2xl:ml-auto">
             <PageTagBreadcrumb currentPage={"Om os"} />
             <H1>Vores vision</H1>
             <P>

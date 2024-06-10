@@ -14,39 +14,41 @@ export const metadata = {
 export default function consulting() {
   return (
     <>
-      <SplitSection>
-        <SplitSectionChild img className="order-last">
+      <SplitSection desktop>
+        <SplitSectionChild desktop img className="order-last">
           <Image
             src="/img/consulting-hero.jpg"
             alt="To personer taler ved bord"
             width={1920}
             height={1080}
-            className="md:w-full md:h-full max-h-[340px] object-cover md:max-h-none bg-ibsilver-400"
+            className="md:w-full md:h-full max-h-[340px] object-cover md:max-h-none bg-ibsilver-400 2xl:aspect-[2/1]"
             priority
           />
         </SplitSectionChild>
-        <SplitSectionChild className={"bg-ibsilver-100 flex flex-col"}>
-          <div className="max-w-[600px]">
+        <SplitSectionChild className={"bg-ibsilver-100"}>
+          <div className="max-w-[600px] flex flex-col 2xl:ml-auto">
             <PageTagBreadcrumb currentPage={"Consulting"} />
             <H1 className={""}>Sammen løser vi dine udfordringer</H1>
             <P className={""}>Vi hjælper med at udvikle og implementere en effektiv strategi, hvor vi identificerer jeres udfordringer, og sikrer en bæredygtig og fremadseende løsning.</P>
             <P className={""}>Vores ekspertområder dækker alt fra udviklingsfasen af nye ideer og strategier, samt det værdiskabende kommunikative arbejde, som følger en ny implementeret strategi.</P>
+            <Link className="pt-7 mt-auto" href="#ekspertOmråder">
+              <Button hasSmallChevron className="gap-0.5">
+                Se vores ekspertområder
+              </Button>
+            </Link>
           </div>
-          <Link className="pt-7 mt-auto" href="#ekspertOmråder">
-            <Button hasSmallChevron className="gap-0.5">
-              Se vores ekspertområder
-            </Button>
-          </Link>
         </SplitSectionChild>
       </SplitSection>
       <section className="md:flex md:min-h-[50vh]">
-        <SplitSectionChild className={"max-md:pb-0 bg-ibsilver-600 md:bg-ibgreen-400 md:flex md:flex-col md:justify-between px-2.5 sm:px-4 md:px-6 lg:px-8 xl:px-10"}>
-          <H2 className={"max-md:text-ibsilver-100 pb-8"}>Sådan kommer du i gang</H2>
-          <Link className="hidden md:block md:mr-auto" href="/kontakt">
-            <Button variant="ghost" size="noPadding" hasArrow>
-              Kontakt os
-            </Button>
-          </Link>
+        <SplitSectionChild className={"max-md:pb-0 bg-ibsilver-600 md:bg-ibgreen-400 px-2.5 sm:px-4 md:px-6 lg:px-8 xl:px-10"}>
+          <div className="md:flex md:flex-col md:justify-between max-w-[600px] 2xl:ml-auto md:h-full">
+            <H2 className={"max-md:text-ibsilver-100 pb-8"}>Sådan kommer du i gang</H2>
+            <Link className="hidden md:block md:mr-auto" href="/kontakt">
+              <Button variant="ghost" size="noPadding" hasArrow>
+                Kontakt os
+              </Button>
+            </Link>
+          </div>
         </SplitSectionChild>
         <SplitSectionChild className={"bg-ibsilver-600 max-md:pt-0 md:pt-12"}>
           <div className="max-w-[600px] flex flex-col gap-8 h-full">
@@ -77,14 +79,14 @@ export default function consulting() {
           <ProductCardSection parentCategory="consulting" cardVariant="white" desc></ProductCardSection>
         </div>
       </section>
-      <SplitSection>
-        <SplitSectionChild img>
+      <SplitSection desktop>
+        <SplitSectionChild desktop img>
           <Image
             src="/img/consulting-potentiale.jpg"
             alt="To personer taler ved bord"
             width={1920}
             height={1080}
-            className="md:w-full md:h-full max-h-[380px] object-cover md:max-h-none bg-ibsilver-400"
+            className="md:w-full md:h-full max-h-[380px] object-cover md:max-h-none bg-ibsilver-400 2xl:aspect-[2/1]"
           />
         </SplitSectionChild>
         <SplitSectionChild className="flex flex-col">
