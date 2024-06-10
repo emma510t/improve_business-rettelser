@@ -26,10 +26,12 @@ export default function consulting() {
           />
         </SplitSectionChild>
         <SplitSectionChild className={"bg-ibsilver-100 flex flex-col"}>
-          <PageTagBreadcrumb currentPage={"Consulting"} />
-          <H1 className={""}>Sammen løser vi dine udfordringer</H1>
-          <P className={""}>Vi hjælper med at udvikle og implementere en effektiv strategi, hvor vi identificerer jeres udfordringer, og sikrer en bæredygtig og fremadseende løsning.</P>
-          <P className={""}>Vores ekspertområder dækker alt fra udviklingsfasen af nye ideer og strategier, samt det værdiskabende kommunikative arbejde, som følger en ny implementeret strategi.</P>
+          <div className="max-w-[600px]">
+            <PageTagBreadcrumb currentPage={"Consulting"} />
+            <H1 className={""}>Sammen løser vi dine udfordringer</H1>
+            <P className={""}>Vi hjælper med at udvikle og implementere en effektiv strategi, hvor vi identificerer jeres udfordringer, og sikrer en bæredygtig og fremadseende løsning.</P>
+            <P className={""}>Vores ekspertområder dækker alt fra udviklingsfasen af nye ideer og strategier, samt det værdiskabende kommunikative arbejde, som følger en ny implementeret strategi.</P>
+          </div>
           <Link className="pt-7 mt-auto" href="#ekspertOmråder">
             <Button hasSmallChevron className="gap-0.5">
               Se vores ekspertområder
@@ -46,25 +48,27 @@ export default function consulting() {
             </Button>
           </Link>
         </SplitSectionChild>
-        <SplitSectionChild className={"bg-ibsilver-600 max-md:pt-0 flex flex-col gap-8 md:pt-12"}>
-          <div className="flex gap-3">
-            <p className="text-ibgreen-400 font-semibold text-2xl md:text-3xl">1: </p>
-            <P className={"text-ibsilver-100 font-semibold"}>Udforsk vores forskellige ydelser nedenfor og find det, der bedst matcher dine behov.</P>
+        <SplitSectionChild className={"bg-ibsilver-600 max-md:pt-0 md:pt-12"}>
+          <div className="max-w-[600px] flex flex-col gap-8 h-full">
+            <div className="flex gap-3">
+              <p className="text-ibgreen-400 font-semibold text-2xl md:text-3xl">1: </p>
+              <P className={"text-ibsilver-100 font-semibold"}>Udforsk vores forskellige ydelser nedenfor og find det, der bedst matcher dine behov.</P>
+            </div>
+            <div className="flex gap-3">
+              <p className="text-ibgreen-400 font-semibold text-2xl md:text-3xl">2: </p>
+              <P className={"text-ibsilver-100 font-semibold"}>Klik på ydelsen for at læse mere om hvad vi kan gøre for dig indenfor området.</P>
+            </div>
+            <div className="flex gap-3">
+              <p className="text-ibgreen-400 font-semibold text-2xl md:text-3xl">3: </p>
+              <P className={"text-ibsilver-100 font-semibold"}>Skriv til os via vores kontaktformular for at aftale, hvordan vi bedst løser dine udfordringer.</P>
+            </div>
+            <P className={"text-ibsilver-100 md:mt-auto"}>VI glæder os til at høre fra dig!</P>
+            <Link className="md:hidden" href="/kontakt">
+              <Button className="mr-auto" variant="ghostWhite" size="noPadding" hasArrow>
+                Kontakt os
+              </Button>
+            </Link>
           </div>
-          <div className="flex gap-3">
-            <p className="text-ibgreen-400 font-semibold text-2xl md:text-3xl">2: </p>
-            <P className={"text-ibsilver-100 font-semibold"}>Klik på ydelsen for at læse mere om hvad vi kan gøre for dig indenfor området.</P>
-          </div>
-          <div className="flex gap-3">
-            <p className="text-ibgreen-400 font-semibold text-2xl md:text-3xl">3: </p>
-            <P className={"text-ibsilver-100 font-semibold"}>Skriv til os via vores kontaktformular for at aftale, hvordan vi bedst løser dine udfordringer.</P>
-          </div>
-          <P className={"text-ibsilver-100"}>VI glæder os til at høre fra dig!</P>
-          <Link className="md:hidden" href="/kontakt">
-            <Button className="mr-auto" variant="ghostWhite" size="noPadding" hasArrow>
-              Kontakt os
-            </Button>
-          </Link>
         </SplitSectionChild>
       </section>
       <section id="ekspertOmråder" className="bg-ibsilver-500 scroll-m-[79px]">
@@ -84,9 +88,11 @@ export default function consulting() {
           />
         </SplitSectionChild>
         <SplitSectionChild className="flex flex-col">
-          <H2>Opnå højere potentiale</H2>
-          <P>Vores mål er at optimere din virksomheds potentiale gennem skræddersyet rådgivning baseret på høje faglige standarder og et solidt etisk fundament.</P>
-          <P>Sammen med vores erfarne konsulenter identificerer vi nøgleområder inden for bæredygtighed og udvikler gradvise løsninger til at forbedre din virksomheds præstationer og resultater.</P>
+          <div className="max-w-[600px]">
+            <H2>Opnå højere potentiale</H2>
+            <P>Vores mål er at optimere din virksomheds potentiale gennem skræddersyet rådgivning baseret på høje faglige standarder og et solidt etisk fundament.</P>
+            <P>Sammen med vores erfarne konsulenter identificerer vi nøgleområder inden for bæredygtighed og udvikler gradvise løsninger til at forbedre din virksomheds præstationer og resultater.</P>
+          </div>
           <Link className="pt-7 mt-auto w-fit h-fit" href="/kontakt">
             <Button variant="ghost" hasArrow size="noPadding">
               Kontakt os

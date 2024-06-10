@@ -50,7 +50,7 @@ export default async function CasePage({ params }) {
           <H2 className="font-bold font-poppins text-[32px]">Situation og udfordringer</H2>
         </SplitSectionChild>
         <SplitSectionChild className={"pt-0"}>
-          <P>{slugData.situation_udfordringer}</P>
+          <P className="max-w-[600px]">{slugData.situation_udfordringer}</P>
         </SplitSectionChild>
       </section>
       <SplitSection>
@@ -59,7 +59,7 @@ export default async function CasePage({ params }) {
           <p className="text-base md:text-3xl">Improve Business’ løsningsforslag er tredelt</p>
         </SplitSectionChild>
         <SplitSectionChild className={"pt-0 bg-ibsilver-500 text-ibsilver-100"}>
-          <div className="flex flex-col gap-8 py-4 md:gap-12">
+          <div className="flex flex-col gap-8 py-4 md:gap-12 max-w-[600px]">
             <div>
               <h3 className="font-bold text-xl md:text-2xl mb-2">
                 <span className="text-ibgreen-400 text-2xl md:text-3xl">Fase 1: </span>

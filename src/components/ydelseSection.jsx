@@ -21,7 +21,7 @@ export default async function YdelseSection({ parent, title }) {
     <>
       <SplitSection>
         <SplitSectionChild className="bg-ibsilver-500 text-ibsilver-100">
-          <div className="flex flex-col gap-8 md:gap-20">
+          <div className="flex flex-col gap-8 md:gap-20 max-w-[600px]">
             {slugChildrenData
               .slice() // Create a shallow copy of the array to avoid mutating the original
               .sort((a, b) => a.id - b.id) // Sort the array based on the id property

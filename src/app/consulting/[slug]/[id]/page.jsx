@@ -69,7 +69,7 @@ export default async function page({ params }) {
         </SplitSectionChild>
         <SplitSectionChild>
           <div
-            className="md:pb-7
+            className="md:pb-7 max-w-[600px]
            "
           >
             <PageTagBreadcrumb grandParent={"Consulting"} grandParentHRef={"/consulting"} parent={idData.parent} parentHRef={`/consulting/${params.slug}`} currentPage={he.decode(idData.title)} />
@@ -85,7 +85,7 @@ export default async function page({ params }) {
           </div>
 
           {idData.ydelse_headline_2 && idData.ydelse_content_2 && (
-            <div className="pt-5">
+            <div className="pt-5 max-w-[600px]">
               <H3>{idData.ydelse_headline_2}</H3>
               {renderContent(idData.ydelse_content_2)}
               {/* {idData.ydelse_content_2.map((content, index) => (
@@ -94,7 +94,7 @@ export default async function page({ params }) {
             </div>
           )}
           {idData.ydelse_headline_3 && idData.ydelse_content_3 && (
-            <div className="pt-5">
+            <div className="pt-5 max-w-[600px]">
               <H3>{idData.ydelse_headline_3}</H3>
               {renderContent(idData.ydelse_content_3)}
               {/*   {idData.ydelse_content_3.map((content, index) => (
@@ -103,7 +103,7 @@ export default async function page({ params }) {
             </div>
           )}
           <div className="pb-8 md:pb-12 pt-[25px] md:pt-[40px] max-w-[1280px] w-full mx-auto">
-            <H2 className="">Se vores andre ekspertiseområder</H2>
+            <H2 className="max-w-[600px]">Se vores andre ekspertise&shy;områder</H2>
             <ProductCardSection slugIcon={idData.icon} parentCategory={idData.parent} />
           </div>
         </SplitSectionChild>
