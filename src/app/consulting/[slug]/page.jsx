@@ -72,13 +72,14 @@ export default async function Page({ params }) {
       <section>
         <div className="pb-8 md:pb-12 pt-[25px] md:pt-[40px] max-w-[1280px] w-full px-2.5 sm:px-4 md:px-6 lg:px-8 xl:px-10 mx-auto">
           <H2 className="">
-            Vores <span className="lowercase">{he.decode(slugData.title)}</span>s&shy;ydelser
+            Vores <span className="lowercase">{he.decode(slugData.title)}</span>
+            s&shy;ydelser
           </H2>
           <ProductCardSection parentCategory={slugData.icon} />
         </div>
       </section>
       <div>
-        <YdelseSection parent={slugData.icon} title={he.decode(slugData.title)} />
+        <YdelseSection parent={slugData.icon} title={slugData.title} />
       </div>
       <section>
         <div className="pb-8 md:pb-12 pt-[25px] md:pt-[40px] max-w-[1280px] w-full px-2.5 sm:px-4 md:px-6 lg:px-8 xl:px-10 mx-auto">
